@@ -6,7 +6,7 @@ module.exports = function calculateHanoi(disksNumber,turnsSpeed) {
 if (typeof(disksNumber) === 'number' && typeof(turnsSpeed) === 'number') {
     result= myCalculateHanoi(disksNumber);
     secondsA = Math.floor(myCalculateHanoi(disksNumber) * 3600 / turnsSpeed);
-    return `{ turns: ${result}, seconds: ${secondsA} }`;
+    return { turns: result, seconds: secondsA };
     } else { return false } };
     function myCalculateHanoi (disksNumber) {
         var turns = 0;
